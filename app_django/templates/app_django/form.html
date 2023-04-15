@@ -1,0 +1,21 @@
+{% load static %}
+<form class="transparent" method="post">
+    <div class="form-inner">
+        {% csrf_token %}
+        <h3>Добавление меню</h3>
+        {% if form %}
+        {% for field in form %}
+        {{ field.errors }}
+        {{ field }}
+        {% endfor %}
+        <input type="submit" value="Добавить меню">
+    </div>
+    <div class="row form-container">
+        {% else %}
+        <div class="form-inner">
+            <label>Достигнут предел по вложенности меню</label>
+        </div>
+        {% endif %}
+    </div>
+</form>
+

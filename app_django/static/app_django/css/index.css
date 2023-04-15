@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  width: 100%;
+  transition: all ease 1s;
+}
+
+.main-content {
+  background: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  letter-spacing: 0;
+}
+.conteiner {
+  background-color: black;
+  opacity: 0.7;
+}
+.body-main-content {
+  padding: 10px 0 0 3%;
+  height: 100vh;
+  width: 800px;
+}
+.main-info {
+  color: rgb(224 224 224);
+  padding-top: 50px;
+  font-size: 22px;
+  letter-spacing: 0;
+}
+.main-number {
+  margin-top: 0 px;
+  color: white;
+  font-size: 24px;
+}
+
+.transparent {
+   position: absolute;
+   top: 350px;
+   left: 570px;
+   max-width: 100%;
+   padding: 170px;
+   margin: auto 0;
+   background-image: url('../images/img1.jpg');
+   background-size: contain;
+}
+* {
+   box-sizing: border-box;
+}
+
+.form-inner {
+   position: relative;
+}
+.form-inner h3 {
+   position: absolute;
+   top: -100px;
+   text-align: center;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 0;
+   font-size: 25px;
+   text-transform: uppercase;
+}
+
+.form-inner label {
+   display: block;
+   padding-left: 15px;
+   font-family: 'Roboto', sans-serif;
+   color: rgba(255, 255, 255, .9);
+   text-transform: uppercase;
+   font-size: 14px;
+}
+::placeholder {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15 px;
+    opacity: 0.7;
+    color: rgba(255, 255, 255, .9);
+}
+.form-inner input {
+   display: block;
+   width: 100%;
+   padding: 0 15px;
+   margin: 10px 0 15px;
+   border-width: 0;
+   line-height: 40px;
+   border-radius: 20px;
+   color: white;
+   background: rgba(255, 255, 255, .2);
+   font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="checkbox"] {
+   position: absolute;
+   opacity: 0;
+}
+#custom-checkbox+label {
+   position: relative;
+   margin: 20px 0;
+   text-transform: none;
+   cursor: pointer;
+}
+#custom-checkbox+label:before {
+   content: "";
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+   vertical-align: text-top;
+   background: white;
+}
+#custom-checkbox:checked+label:before {
+   background: #1762EE;
+}
+#custom-checkbox:checked+label:after {
+   content: "";
+   position: absolute;
+   width: 2px;
+   height: 2px;
+   left: 20px;
+   top: 9px;
+   background: white;
+   box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+   transform: rotate(45deg);
+}
+.form-inner input[type="submit"] {
+   background: #1762EE;
+}
+
+.nav {
+    background: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+.nav a {
+    text-decoration: none;
+    display: block;
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.topmenu > li {
+    display: block;
+    /*Если вместо block задать inline-block,
+    меню будет горизонтальным*/
+    position: relative;
+    width: 150px;
+}
+.topmenu > li > a {
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    border: 1px solid #999;
+}
+
+.submenu li {
+    position: relative;
+    border: 2px solid #999;
+    margin: 2px;
+}
+.submenu a {
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: px 5px;
+}
+
+
+@media screen and (max-width: 1500px) {
+.transparent {
+   position: absolute;
+   top: 350px;
+   left: 450px;
+   max-width: 100%;
+   padding: 130px;
+   margin: auto 0;
+   background-image: url('../images/img1.jpg');
+   background-size: contain;
+}
+}
+
+@media screen and (max-width: 1120px) {
+
+.main-info {
+    padding-top: 30px;
+    font-size: 18px;
+}
+
+.transparent {
+   position: absolute;
+   top: 350px;
+   left: 200px;
+   max-width: 100%;
+   padding: 90px;
+   margin: auto 0;
+   background-image: url('../images/img1.jpg');
+   background-size: contain;
+}
+.form-inner h3 {
+   position: absolute;
+   top: -100px;
+   text-align: center;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 0;
+   font-size: 25px;
+   text-transform: uppercase;
+}}
+
+
+@media screen and (max-width: 675px) {
+
+.transparent {
+   position: absolute;
+   max-width: 100%;
+   padding: 80px;
+   margin: auto 0;
+   background-image: url('../images/img1.jpg');
+   background-size: contain;
+}
+.form-inner h3 {
+   position: absolute;
+   top: -100px;
+   text-align: center;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 0;
+   font-size: 25px;
+   text-transform: uppercase;
+}
+  .body-main-content {
+  padding: 10px 0 0 3%;
+  height: 100vh;
+  width: 200px;
+}}
+
+

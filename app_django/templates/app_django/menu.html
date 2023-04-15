@@ -1,0 +1,41 @@
+{% load static %}
+<div class="nav">
+    <ul class="topmenu">
+        <li><a href="/"> Главная страница </a>
+            {% for menu_1 in sort_menu %}
+        <li><a href="/{{ menu_1.url }}"> {{ menu_1.name_menu }}</a>
+            {% if menu_1.next_position %}
+            <ul class="submenu">
+                {% for menu_2 in menu_1.next_position %}
+                <li><a href="/{{ menu_2.url }}"> {{ menu_2.name_menu }}</a>
+                    {% if menu_2.next_position %}
+                    <ul class="submenu">
+                        {% for menu_3 in menu_2.next_position %}
+                        <li><a href="/{{ menu_3.url }}"> {{ menu_3.name_menu }}</a>
+                            {% if menu_3.next_position %}
+                            <ul class="submenu">
+                                {% for menu_4 in menu_3.next_position %}
+                                <li><a href="/{{ menu_4.url }}"> {{ menu_4.name_menu}}</a>
+                                    {% if menu_4.next_position %}
+                                    <ul class="submenu">
+                                        {% for menu_5 in menu_4.next_position %}
+                                        <li><a href="/{{ menu_5.url }}"> {{menu_5.name_menu }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
