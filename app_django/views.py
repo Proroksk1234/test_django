@@ -32,7 +32,8 @@ class GetCreateMenu(View):
         form = PostMenuForm(request.POST)
         if form.is_valid():
             form_data = form.cleaned_data
-            name_menu = form_data['name_menu'].replace('&', '').replace('/', '')
+            name_menu = form_data[
+                'name_menu'].replace('&', '').replace('/', '').lstrip(' ').rstrip(' ').replace(' ', '_')
             if len(name_menu) == 0:
                 raise ValidationError("Введено неверное по размеру имя в форме")
             return render(request, 'app_django/home.html',
