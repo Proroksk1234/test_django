@@ -1,6 +1,6 @@
 from django import forms
 
-name_regex = r'^[-0-9A-Za-zА-Яа-я*!@#$%()"№;%:?]{1,30}$'
+name_regex = r'^[-0-9A-Za-zА-Яа-я *!@#$%()"№;%:?]{1,30}$'
 
 
 class PostMenuForm(forms.Form):
